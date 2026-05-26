@@ -1,0 +1,189 @@
+:root{
+  --primary:#1E3A8A;      /* azul petróleo */
+  --secondary:#3B82F6;    /* azul claro  */
+  --bg:#F3F4F6;           /* cinza claro */
+  --text:#111827;         /* preto carvão */
+  --muted:#6B7280;        /* cinza médio */
+  --card:#FFFFFF;         /* branco */
+  --accent:#10B981;       /* verde sutil para sucessos/links */
+  --shadow:0 8px 24px rgba(17,24,39,.08);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);scroll-behavior:smooth}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:0 auto}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(243,244,246,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(0,0,0,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand-logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--secondary));box-shadow:var(--shadow)}
+.brand h1{font-size:16px;margin:0;font-weight:700;letter-spacing:.2px}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav a{padding:10px 12px;border-radius:10px;color:#111827;font-weight:600}
+nav a.cta{background:var(--primary);color:#fff;box-shadow:var(--shadow)}
+nav a:hover{background:#e5e7eb}
+nav a.cta:hover{filter:brightness(.95)}
+
+/* Hero */
+.hero{padding:72px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.kicker{display:inline-block;font-weight:700;color:var(--primary);background:#e0e7ff;padding:6px 10px;border-radius:999px;letter-spacing:.3px;margin-bottom:16px}
+.hero h2{font-size:42px;line-height:1.15;margin:0 0 10px}
+.hero p{font-size:18px;color:var(--muted);margin:0 0 22px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;font-weight:600;box-shadow:var(--shadow)}
+.btn.primary{background:var(--primary);color:#fff;border-color:transparent}
+.btn.secondary{background:#fff;color:var(--primary)}
+.btn:hover{transform:translateY(-1px);transition:.2s ease;box-shadow:0 10px 28px rgba(17,24,39,.12)}
+.portrait{position:relative}
+.portrait .card{background:var(--card);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+.portrait .frame{aspect-ratio:1/1;border-radius:20px;background:linear-gradient(135deg,#e2e8f0,#fff);display:grid;place-items:center;overflow:hidden}
+.badge{position:absolute;bottom:-10px;right:-10px;background:#ecfeff;color:#155e75;border:1px solid #99f6e4;border-radius:12px;padding:8px 12px;font-size:12px;box-shadow:var(--shadow)}
+
+/* Sections */
+section{padding:56px 0}
+.section-title{font-size:26px;margin:0 0 18px}
+.section-sub{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+
+/* Experiência - linha do tempo */
+.timeline{position:relative;margin-left:8px}
+.timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#e5e7eb}
+.tl-item{position:relative;padding-left:32px;margin:16px 0}
+.tl-item::before{content:"";position:absolute;left:2px;top:8px;width:16px;height:16px;border-radius:999px;background:var(--secondary);box-shadow:0 0 0 4px #e0e7ff}
+.tl-item h4{margin:.2rem 0;font-size:16px}
+.tl-item p{margin:.2rem 0;color:var(--muted)}
+.pill{display:inline-block;background:#eef2ff;color:var(--primary);border:1px solid #e0e7ff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600}
+
+/* Habilidades */
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:#fff;border:1px solid #e5e7eb;padding:8px 12px;border-radius:999px;font-weight:600}
+
+/* Projetos */
+.project{display:flex;flex-direction:column;gap:10px}
+.project h4{margin:0}
+.project small{color:var(--muted)}
+.project .meta{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Educação & Certs */
+.list{display:grid;gap:10px}
+.list-item{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}
+.list-item span{color:var(--muted)}
+
+/* Depoimentos */
+.quote{font-size:15px;color:var(--text)}
+.quote:before{content:"“";font-size:28px;color:var(--secondary);margin-right:4px}
+.author{display:flex;align-items:center;gap:10px;margin-top:8px;color:var(--muted)}
+.avatar{width:32px;height:32px;border-radius:999px;background:linear-gradient(135deg,#93c5fd,#a3e635)}
+.frame .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; /* herda o arredondamento do frame */
+  object-fit: cover;      /* preenche todo o espaço sem distorcer */
+  display: block;
+}
+
+/* Footer */
+footer{background:#0f172a;color:#e5e7eb;margin-top:40px}
+.footer{padding:28px 0;display:grid;gap:12px}
+.social{display:flex;gap:12px}
+.social a{display:inline-flex;align-items:center;gap:8px;background:#111827;color:#fff;border-radius:12px;padding:10px 12px}
+.social a:hover{background:#0b1220}
+.copy{color:#94a3b8;font-size:14px}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  nav ul{gap:10px}
+  .grid.cols-3{grid-template-columns:1fr}
+  .grid.cols-2{grid-template-columns:1fr}
+}
+
+/* Micro animações */
+[data-animate]{opacity:0;transform:translateY(10px);animation:fadeUp .5s ease forwards}
+[data-animate].d2{animation-delay:.15s}
+[data-animate].d3{animation-delay:.3s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* Habilidades */
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.tag{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;                 /* vira “botão” */
+  transition:background .2s ease, color .2s ease, border-color .2s ease, transform .08s ease;
+  user-select:none;
+}
+.tag:hover{
+  background:var(--secondary);    /* cor ao hover */
+  color:#fff;
+  border-color:transparent;
+}
+.tag:active{ transform:scale(.98); }
+
+/* estado ativo (clicado/selecionado) */
+.tag.active{
+  background:var(--primary);      /* cor quando ativo */
+  color:#fff;
+  border-color:transparent;
+  box-shadow:var(--shadow);
+}
+
+/* foco visível para acessibilidade */
+.tag:focus{
+  outline:3px solid color-mix(in hsl, var(--secondary), white 25%);
+  outline-offset:2px;
+}
+
+/* Caixa de competências */
+.skills-content {
+  margin-top: 16px;
+}
+
+.skill-box {
+  display: none;
+  background: #f9fafb;
+  border-left: 4px solid var(--primary);
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.skill-box h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.skill-box ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.badge-cv {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #0f172a; /* azul escuro elegante */
+  color: #ffffff;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px; /* cantos arredondados */
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.badge-cv:hover {
+  background: #1e3a8a; /* azul um pouco mais claro no hover */
+  transform: translateY(-2px);
+}
