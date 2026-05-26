@@ -37,6 +37,7 @@ Atuo com foco em estabilidade, segurança, continuidade operacional e redução 
 <div>|---camila.jpg - Foto principal</div>
 <div>|---favicon-16.png - favicon pequeno</div>
 <div>|---favicon-32.png - favicon grande</div>
+<div>|---CamilaHSiqueira_Curriculo.pdf - meu curriculo para download</div>
 
 ### 🚀 Como visualizar o site
 Você pode acessar o site diretamente via GitHub Pages:
